@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body>
+    <audio id="myAudio" ontimeupdate="onTimeUpdate()">
+        <source src="" id="source-audio" type="audio/ogg">
+        <!-- <source id="source-audio" src="" type="audio/mpeg">
+        Your browser does not support the audio element. -->
+    </audio>
+<div class="container">
+    <div class="audio">
+
+        <div class="audio-titles">
+            <div class="audio-title-content">
+            <p class="title">Nach Meri Rani</p>
+            <p class="singer">Guru Randhawa</p>
+            </div>
+            <div class="minimize-button">
+                <i class="material-icons maxmin" onclick="expAndComPlayer()">expand_less</i>
+            </div>
+        </div>
+        <div class="audio-img-title">
+            <img src="audioimgtitile/nach.jpeg">
+        </div>
+        <div class="bar-duration">
+            <p class="audio-currentTime">00:00</p>
+            <div class="show-bar" onclick="skipToThere(event)">
+              <div class="current-bar"></div>
+            </div>
+            <p class="audio-totalDuration">00:00</p>
+         </div>
+        <div class="controls">
+            <div class="volume-container">
+               <button><i class="material-icons">volume_up</i></button>
+               <div class="volume-slider-container" onclick="changeVolume(event)">
+                   <div class="volume-slider">
+                   </div>
+               </div>
+            </div>
+            <button><i class="material-icons repeatShuffleNone" onclick="repeatShuffleNone()">repeat</i></button>
+            <div class="next-prev-play-pause">
+                <button><i class="material-icons" style="font-size:3rem;">skip_previous</i></button>
+                <button class="play-pause" onclick="playPause()">
+                    <i class="material-icons play-icon" style="font-size:4rem;">play_circle_outline</i>
+                </button>
+                <button onclick="next()"><i class="material-icons" style="font-size:3rem;">skip_next</i></button>
+            </div>
+            <button><i class="material-icons">library_music</i></button>
+            <button><i class="material-icons">queue_music</i></button>
+        </div> 
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
